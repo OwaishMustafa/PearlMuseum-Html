@@ -5,15 +5,41 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscal;
+    width: 100%;
     height: 100%;
-    background-color: $secondary;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    background-color: $primary;
-    //font-family: $font;
+    -ltr-font-family: 'HelveticaNeue', sans-serif;
+    -rtl-font-family: 'GESSTwo', sans-serif;
+    @include font-size($md-font);
+    line-height: 1.25;
+    overflow-x: hidden;
+}
+
+////////////
+// Page Canvas
+///////////
+
+.canv {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    // padding-top: 102px;
+    @include transition(opacity 300ms ease);
+    .loaded &{
+        opacity: 1;
+    }
+    @media(min-width: map-get($breakpoints, lg)) {
+        // padding-top:121px;
+    }
+}
+
+.container {
+    @media(min-width: map-get($breakpoints, xxl)) {
+        width: 1350px;
+        max-width: 100%;
+    }
 }
 
 ////////////
@@ -27,32 +53,161 @@ body {
 }
 
 //////////////
-// headers
+// headings
 ////////////
-h1{
-    font-weight: 500;
-}
-h2{
-    font-weight: 500;
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
 }
 
 //////////////
 // links
 ////////////
 
-
-////////////
-// Page Canvas
-///////////
-.canv{
-    max-width: map-get($breakpoints, xxl); 
-    margin: 0 auto;
-    position: relative;
-    //overflow-x: hidden;
-    -webkit-box-shadow: 0px 0px 100px -25px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.25);
-    background: $secondary;
-    
-    
+a {
+    color: $black;
+    @include transition(color 300ms, background 300ms);
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        text-decoration: none;
+        color: $black;
+    }
+    &:focus {
+        outline: 0;
+    }
 }
+
+/////////////
+// containers background
+//////////////
+.bg-silver {
+    background-color: $silver;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-primary,
+.bg-blue,
+.bg-secondary {
+    color: $white;
+    a {
+        color: $silver;
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+    .section-title {
+        h2 {
+            &:before {
+                border-color: $white;
+            }
+        }
+    }
+    .headline-tile {
+        * {
+            color: $white;
+        }
+    }
+    svg {
+        path {
+            fill: $white;
+        }
+    }
+}
+
+.bg-secondary {
+    background-color: $secondary;
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.bg-blue {
+    background-color: $black;
+}
+
+.overylay-primary,
+.overylay-secondary {
+    position: relative;
+    .row {
+        z-index: 1
+    }
+    &:before {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        z-index: 0;
+    }
+}
+
+.overylay-secondary {
+    &:before {
+        background-color: $secondary;
+    }
+}
+
+.overylay-primary {
+    &:before {
+        background-color: $primary;
+    }
+}
+
+.overylay-blue {
+    &:before {
+        background-color: $black;
+    }
+}
+
+///////////
+// Content section
+//////
+.content-section {
+    padding: 80px 0;
+    .section-title {
+        display: block;
+        width: 100%;
+        h2 {
+            @include font-size($xxl-font);
+        }
+    }
+    &.no-padding-bottom {
+        padding-bottom: 0;
+    }
+    &.no-padding-top {
+        padding-top: 0;
+    }
+    &.no-padding-left {
+        padding-left: 0;
+    }
+    &.no-padding-right {
+        padding-right: 0;
+    }
+}
+
+// .canv{
+//     max-width: map-get($breakpoints, xxl); 
+//     margin: 0 auto;
+//     position: relative;
+//     //overflow-x: hidden;
+//     -webkit-box-shadow: 0px 0px 100px -25px rgba(0, 0, 0, 0.25);
+//     -moz-box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.25);
+//     box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.25);
+    
+    
+// }
