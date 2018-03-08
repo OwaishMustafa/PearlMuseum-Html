@@ -1,0 +1,11 @@
+@import "../../base/index";
+.fixed-title {
+    top: 85%;
+    width: 50%;
+    position: fixed;
+    padding: 40px;
+    @include font-size($lg-font);
+    a{
+        color: $white;
+    }
+}

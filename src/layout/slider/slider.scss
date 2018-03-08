@@ -1,1 +1,11 @@
-@import '../../base/index';
+@import "../../base/index";
+
+.image-slider {
+    position: relative;
+    .carousel-indicators {
+        justify-content: flex-end;
+        margin-right: 2%;
+    }
+}
+
+

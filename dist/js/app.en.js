@@ -23239,7 +23239,7 @@ requireSCSS.keys().forEach(requireSCSS);
 // require('expose-loader?app!./widgets/calendar/calendar');
 // require('expose-loader?app!./widgets/treetable/treetable');
 // require('expose-loader?app!./widgets/treetable/sortable');
-// require('expose-loader?app!./layout/slider/slider');
+__webpack_require__(97);
 
 //require('./js/forms');
 
@@ -37579,13 +37579,13 @@ webpackContext.id = 21;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./cover/cover.scss": 82,
+	"./fixed-title/fixed-title.scss": 86,
 	"./footer/footer.scss": 25,
 	"./main/main.scss": 26,
 	"./nav/nav.scss": 27,
-	"./placeholder/placeholder.scss": 28,
 	"./slider/slider.scss": 29,
-	"./tiles/tiles.scss": 30,
-	"./widget/widget.scss": 31
+	"./swiper/swiper.scss": 95
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -37622,28 +37622,270 @@ webpackContext.id = 24;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 28 */,
 /* 29 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 30 */
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 31 */
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 96 */,
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["app"] = __webpack_require__(98);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports) {
+
+////
+//Application Module
+////////////////////
+
+var slider = (function () {
+    "use strict";
+    //-----------------------------------------------------------------
+    // Page Initalization handler : exposed to app.init();
+    //-----------------------------------------------------------------
+    var init = function () {
+        _swipeHandler();
+    },
+        //-----------------------------------------------------------------
+        // swiper mapping functions
+        //-----------------------------------------------------------------
+        _swipeHandler = function (c) {
+
+            $('.swiper-container').each(function (i, e) {
+                var spv = $(e).data('size'); // slides per view
+
+
+                var conf = {
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    nextButton: $(e).parent().find('.swiper-button-next'),
+                    prevButton: $(e).parent().find('.swiper-button-prev'),
+                    slidesPerView: spv,
+                    speed: 1000
+
+                };
+
+                // Responsive Settings
+                if ($(e).data('responsive')) {
+                    var sm, md, lg;
+                    sm = md = lg = spv;
+                    if (e.hasAttribute('data-size-s')) {
+                        sm = md = lg = $(e).data('sizeS');
+                    }
+                    if (e.hasAttribute('data-size-m')) {
+                        md = lg = $(e).data('sizeM');
+                    }
+                    if (e.hasAttribute('data-size-l')) {
+
+                        lg = $(e).data('sizeL');
+                    }
+
+                    conf.breakpoints = {
+                        1140: {
+                            slidesPerView: lg
+
+                        },
+                        960: {
+                            slidesPerView: md
+
+                        },
+                        720: {
+                            slidesPerView: sm
+                        }
+                    }
+                }
+
+                // freeMode Settings
+                if ($(e).data('freemode')) {
+                    conf.freeMode = true;
+                }
+
+                // effect Settings
+                if ($(e).data('effect')) {
+                    conf.effect = $(e).data('effect');
+                }
+                // speed Settings
+                if ($(e).data('speed')) {
+                    conf.speed = $(e).data('speed');
+                }
+                if ($(e).data('direction')) {
+                    conf.direction = $(e).data('direction');
+                }
+
+                var swiper = new Swiper($(e), conf);
+                $(e).data('swiper', swiper);
+
+            });
+
+        },
+        reInit = function (s) {
+
+            //  $('.swiper-container').each(function (i, e) {
+            var spv = $(s).data('size'); // slides per view
+
+
+            var conf = {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                nextButton: $(s).parent().find('.swiper-button-next'),
+                prevButton: $(s).parent().find('.swiper-button-prev'),
+                slidesPerView: spv,
+                speed: 1000
+
+            };
+
+            // Responsive Settings
+            if ($(s).data('responsive')) {
+                var sm, md, lg;
+                sm = md = lg = spv;
+                if (e.hasAttribute('data-size-s')) {
+                    sm = md = lg = $(s).data('sizeS');
+                }
+                if (e.hasAttribute('data-size-m')) {
+                    md = lg = $(s).data('sizeM');
+                }
+                if (e.hasAttribute('data-size-l')) {
+
+                    lg = $(s).data('sizeL');
+                }
+
+                conf.breakpoints = {
+                    1140: {
+                        slidesPerView: lg
+
+                    },
+                    960: {
+                        slidesPerView: md
+
+                    },
+                    720: {
+                        slidesPerView: sm
+                    }
+                }
+            }
+
+            // freeMode Settings
+            if ($(s).data('freemode')) {
+                conf.freeMode = true;
+            }
+
+            // effect Settings
+            if ($(s).data('effect')) {
+                conf.effect = $(s).data('effect');
+            }
+            // speed Settings
+            if ($(s).data('speed')) {
+                conf.speed = $(s).data('speed');
+            }
+            if ($(s).data('direction')) {
+                conf.direction = $(s).data('direction');
+            }
+
+            var swiper = new Swiper($(s), conf);
+            $(s).data('swiper', swiper);
+
+            //   });
+
+        };
+
+
+    // Expose Global Functions
+    return {
+        init: init,
+        reInit: reInit
+    };
+})();
+$().ready(function () {
+    slider.init();
+
+});
 
 /***/ })
 /******/ ]);

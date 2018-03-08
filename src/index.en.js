@@ -50,6 +50,6 @@ requireSCSS.keys().forEach(requireSCSS);
 // require('expose-loader?app!./widgets/calendar/calendar');
 // require('expose-loader?app!./widgets/treetable/treetable');
 // require('expose-loader?app!./widgets/treetable/sortable');
-// require('expose-loader?app!./layout/slider/slider');
+require('expose-loader?app!./layout/slider/slider');
 
 //require('./js/forms');

@@ -1,5 +1,65 @@
-@import '../../base/index';
+@import "../../base/index";
 
-footer{
-  
+.pg-footer {
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding: 150px 0;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    .logos {
+        @include font-size($md-font);
+
+        a {
+            font-weight: 600;
+        }
+
+        .main {
+            width: 9px;
+            margin-left: 5px;
+        }
+
+        .enbd {
+            max-width: 175px;
+            margin-top: 30px;
+        }
+    }
+
+    .footer-items {
+        margin: auto 60px;
+        @include font-size($xs-font);
+        dl {
+            dt {
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            dd {
+                font-weight: 300;
+                line-height: 2;
+
+                ul {
+                    padding: 0;
+                    margin-left: 0;
+                    margin-top: 10px;
+                    list-style: none;
+                }
+            }
+        }
+
+        .social-links {
+            padding: 0;
+            margin-left: 0;
+            text-align: left;
+            list-style: none;
+            word-spacing: 10px;
+
+            li {
+                display: inline-block;
+            }
+        }
+    }
 }

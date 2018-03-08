@@ -36,6 +36,10 @@ body {
 }
 
 .container {
+    padding: 0;
+    margin-right: 0;
+    margin-left: 40px;
+    width: 100%;
     @media(min-width: map-get($breakpoints, xxl)) {
         width: 1350px;
         max-width: 100%;
@@ -68,14 +72,12 @@ h4 {
 ////////////
 
 a {
-    color: $black;
     @include transition(color 300ms, background 300ms);
     &:hover,
     &:active,
     &:focus,
     &:visited {
         text-decoration: none;
-        color: $black;
     }
     &:focus {
         outline: 0;
@@ -85,75 +87,17 @@ a {
 /////////////
 // containers background
 //////////////
-.bg-silver {
-    background-color: $silver;
+.bg-brand{
+    background-color: $brand;
+    color: $white !important;
+}
+
+.bg-primary{
+    background-color: $primary !important;
 }
 
 .bg-white {
     background-color: $white;
-}
-
-.bg-primary,
-.bg-blue,
-.bg-secondary {
-    color: $white;
-    a {
-        color: $silver;
-        &:hover,
-        &:active,
-        &:focus,
-        &:visited {
-            text-decoration: none;
-            color: $white;
-        }
-    }
-    .section-title {
-        h2 {
-            &:before {
-                border-color: $white;
-            }
-        }
-    }
-    .headline-tile {
-        * {
-            color: $white;
-        }
-    }
-    svg {
-        path {
-            fill: $white;
-        }
-    }
-}
-
-.bg-secondary {
-    background-color: $secondary;
-}
-
-.bg-primary {
-    background-color: $primary;
-}
-
-.bg-blue {
-    background-color: $black;
-}
-
-.overylay-primary,
-.overylay-secondary {
-    position: relative;
-    .row {
-        z-index: 1
-    }
-    &:before {
-        content: ' ';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0.8;
-        z-index: 0;
-    }
 }
 
 .overylay-secondary {
@@ -162,43 +106,9 @@ a {
     }
 }
 
-.overylay-primary {
-    &:before {
-        background-color: $primary;
-    }
-}
-
-.overylay-blue {
-    &:before {
-        background-color: $black;
-    }
-}
-
 ///////////
 // Content section
 //////
-.content-section {
-    padding: 80px 0;
-    .section-title {
-        display: block;
-        width: 100%;
-        h2 {
-            @include font-size($xxl-font);
-        }
-    }
-    &.no-padding-bottom {
-        padding-bottom: 0;
-    }
-    &.no-padding-top {
-        padding-top: 0;
-    }
-    &.no-padding-left {
-        padding-left: 0;
-    }
-    &.no-padding-right {
-        padding-right: 0;
-    }
-}
 
 // .canv{
 //     max-width: map-get($breakpoints, xxl); 
