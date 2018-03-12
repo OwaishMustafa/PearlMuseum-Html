@@ -1,33 +1,59 @@
-@import '../../base/index';
+@import "../../base/index";
 
-.navbar{
-    padding: 0;
-    .navbar-brand{
+.navbar {
+    padding: 20px;
+    @media (min-width: map-get($breakpoints, lg)) {
+        padding: 0;
+    }
+
+    button{
+        top: -6px;
+        right: 5rem;
+    }
+
+
+    .navbar-toggler-icon{
+        color: $white;
+    }
+
+    .navbar-brand {
         color: $peach;
         font-weight: 600;
+
         @include font-size($md-font);
-        img{
+
+        img {
             width: 9px;
             margin-left: 5px;
         }
     }
-    .navbar-nav{
+
+    .navbar-nav {
         width: 80%;
         margin-left: 70px;
-        .nav-item{
+
+        .nav-item {
             flex: 1;
             font-weight: 600;
-            margin-right: 30px;
             text-transform: uppercase;
+
             @include font-size($xxs-font);
-            a{
+
+            a {
                 color: $white;
             }
         }
     }
-    .language{
+
+    .language {
         padding: 20px;
         text-align: center;
+
         @include font-size($md-font);
+
+        @media (max-width: map-get($breakpoints, lg)) {
+            display: none;
+            margin-right: 10px;
+        }
     }
 }

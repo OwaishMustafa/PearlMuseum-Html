@@ -18,12 +18,12 @@
 <body>
   <div class="canv">
     <!-- Navigation Bar Starts -->
-    <nav class="navbar navbar-toggleable-md  sticky-top bg-primary">
+    <nav class="navbar navbar-toggleable-md fixed-top bg-primary">
       <div class="container">
-        <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button class="navbar-toggler navbar-toggler-right navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button> -->
+        </button>
         <a class="navbar-brand" href="#">The Pearl Museum
           <img src="../img/logo.png">
         </a>
@@ -46,7 +46,7 @@
             </li>
           </ul>
         </div>
-        <a class="language bg-brand">
+        <a class="language bg-brand" href="#">
           عربي
         </a>
       </div>
@@ -60,12 +60,14 @@
           <h2>From dhows to diverse</h2>
           <h3>a story that began in 1963</h3>
           <label>Explore the Pearl Museum's story</label>
-          <!-- <div class="cover-quotes">
+          <div class="cover-quotes">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna
               aliqua. </p>
-          </div> -->
+          </div>
           <div class="mouse-wrap">
-            <img src="../img/scroll.png" alt="Scroll Down" title="Scroll Down">
+            <a href="#">
+              <img src="../img/scroll.png" alt="Scroll Down" title="Scroll Down">
+            </a>
           </div>
         </div>
 
@@ -80,24 +82,78 @@
           <h2>A maritime tradition</h2>
           <h3>lorem ipsum dolor sit amet, consectetur</h3>
         </div>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url(../img/slider-1.jpg);">
-            </div>
-            <div class="swiper-slide" style="background-image: url(../img/slider-2.jpg);">
-            </div>
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination pg-seagreen"></div>
-        </div>
       </div>
     </div>
     <!-- Page Cover Ends -->
 
+    <!-- Image Swiper Starts-->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(../img/slider-1.jpg);">
+        </div>
+        <div class="swiper-slide" style="background-image: url(../img/slider-2.jpg);">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination pg-seagreen"></div>
+    </div>
+    <!-- Image Swiper Ends-->
+
     <!-- Content Swiper Starts -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background-image: url(../img/pearl.jpg);">
+        <div class="swiper-slide">
+          <div class="row">
+            <div class="col-sm-12 col-lg-7">
+              <div class="swiper-image" style="background-image: url(../img/pearl.jpg);">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              <div class="swiper-content">
+                <h2>Sultan Ali Al Owais</h2>
+                <p>It was the wish of the late Chairman of National Bank of Dubai to display this priceless collection of natural
+                  Gulf Pearls as a tribute to the citizens of the UAE and the Gulf at large, as a reminder of a way of life
+                  now lost forever.</p>
+                <a href="#">Discover Collections</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="row">
+            <div class="col-sm-12 col-lg-7">
+              <div class="swiper-image" style="background-image: url(../img/pearl.jpg);">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              <div class="swiper-content">
+                <h2>Sultan Ali Al Owais</h2>
+                <p>It was the wish of the late Chairman of National Bank of Dubai to display this priceless collection of natural
+                  Gulf Pearls as a tribute to the citizens of the UAE and the Gulf at large, as a reminder of a way of life
+                  now lost forever.</p>
+                <a href="#">Discover Collections</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="row">
+            <div class="col-sm-12 col-lg-7">
+              <div class="swiper-image" style="background-image: url(../img/pearl.jpg);">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              <div class="swiper-content">
+                <h2>Sultan Ali Al Owais</h2>
+                <p>It was the wish of the late Chairman of National Bank of Dubai to display this priceless collection of natural
+                  Gulf Pearls as a tribute to the citizens of the UAE and the Gulf at large, as a reminder of a way of life
+                  now lost forever.</p>
+                <a href="#">Discover Collections</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-slide" style="background-image: url(../img/pearl.jpg);">
           <div class="swiper-content">
             <h2>Sultan Ali Al Owais</h2>
             <p>It was the wish of the late Chairman of National Bank of Dubai to display this priceless collection of natural
@@ -105,25 +161,7 @@
               lost forever.</p>
             <a href="#">Discover Collections</a>
           </div>
-        </div>
-        <div class="swiper-slide" style="background-image: url(../img/pearl.jpg);">
-          <div class="swiper-content">
-            <h2>Sultan Ali Al Owais</h2>
-            <p>It was the wish of the late Chairman of National Bank of Dubai to display this priceless collection of natural
-              Gulf Pearls as a tribute to the citizens of the UAE and the Gulf at large, as a reminder of a way of life now
-              lost forever.</p>
-            <a href="#">Discover Collections</a>
-          </div>
-        </div>
-        <div class="swiper-slide" style="background-image: url(../img/pearl.jpg);">
-          <div class="swiper-content">
-            <h2>Sultan Ali Al Owais</h2>
-            <p>It was the wish of the late Chairman of National Bank of Dubai to display this priceless collection of natural
-              Gulf Pearls as a tribute to the citizens of the UAE and the Gulf at large, as a reminder of a way of life now
-              lost forever.</p>
-            <a href="#">Discover Collections</a>
-          </div>
-        </div>
+        </div> -->
       </div>
       <!-- Add Pagination -->
       <div class="swiper-pagination pg-brand"></div>
@@ -140,7 +178,7 @@
     <div class="pg-footer bg-brand">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4 col-md-2">
+          <div class="col-sm-12 col-md-3">
             <div class="logos">
               <div class="row">
                 <div class="col-12">
@@ -156,10 +194,10 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-8 col-md-10">
+          <div class="col-sm-12 col-md-9">
             <div class="footer-items">
               <div class="row">
-                <div class="col">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <dl>
                     <dt>
                       <a href="#">About</a>
@@ -176,14 +214,14 @@
                     </dd>
                   </dl>
                 </div>
-                <div class="col">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <dl>
                     <dt>
                       <a href="#">Our History</a>
                     </dt>
                   </dl>
                 </div>
-                <div class="col">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <dl>
                     <dt>
                       <a href="#">Collections</a>
@@ -200,16 +238,17 @@
                     </dd>
                   </dl>
                 </div>
-                <div class="col">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <dl>
                     <dt>
                       <a href="#">Contact Us</a>
                     </dt>
                   </dl>
                 </div>
-                <div class="col">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <dl>
                     <dt>
+                      <hr>
                       <ul class="social-links">
                         <li>
                           <a href="#" alt="Twitter">

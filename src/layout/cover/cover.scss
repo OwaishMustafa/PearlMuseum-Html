@@ -1,14 +1,17 @@
 @import "../../base/index";
 
 .pg-cover {
+    height: 100%;
     position: relative;
-    min-height: 500px;
+
+    // min-height: 500px;
     background-color: $black;
 
     .pg-cover-bg {
         width: 100%;
+        height: 100%;
         background-size: cover;
-        background-position: center;
+        background-position: top;
 
         .cover-content {
             margin: auto;
@@ -22,7 +25,7 @@
 
             h3 {
                 line-height: 1.5;
-                font-weight: 400;
+                font-weight: 500;
                 color: $secondary;
                 font-style: italic;
 
@@ -31,7 +34,7 @@
 
             label {
                 color: $white;
-                font-weight: 600;
+                font-weight: 900;
                 margin-top: 30px;
                 text-transform: uppercase;
 
@@ -39,16 +42,24 @@
             }
 
             .cover-quotes {
-                width: 380px;
+                bottom: 15px;
+                line-height: 1.3;
                 color: $secondary;
-                margin-left: 100px;
+                position: absolute;
                 font-style: italic;
-                @include font-size($lg-font);
+
+                @include font-size($xl-font);
+
+                @media (min-width: map-get($breakpoints, lg)) {
+                    left: 100px;
+                    width: 500px;
+                    text-align: left;
+                }
             }
 
             .mouse-wrap {
                 left: 50%;
-                top: 350px;
+                top: 380px;
                 position: absolute;
                 display: inline-block;
             }
@@ -57,21 +68,21 @@
 
     &.sand {
         .pg-cover-bg {
-            min-height: 1500px;
             background-image: url("../../../html/img/sand.jpg");
+
             .cover-content {
-                padding: 110px 0px;
+                padding-top: 150px;
             }
         }
     }
 
     &.sea {
         .pg-cover-bg {
-            min-height: 1400px;
             background-image: url("../../../html/img/sea.jpg");
 
             .cover-content {
-                padding: 150px 0px;
+                padding-top: 150px;
+
                 h2 {
                     color: $seagreen;
 

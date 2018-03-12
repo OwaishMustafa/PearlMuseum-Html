@@ -5,60 +5,114 @@
     background-position: center right;
     padding: 150px 0;
 
-    a {
-        color: $white;
-        text-decoration: none;
+    @media (max-width: map-get($breakpoints, md)) {
+        text-align: center;
+        padding: 150px 0 40px 0;
     }
 
-    .logos {
-        @include font-size($md-font);
+    .container {
+        @media (max-width: map-get($breakpoints, md)) {
+            margin: 0;
+        }
 
         a {
-            font-weight: 600;
+            color: $white;
+            text-decoration: none;
         }
 
-        .main {
-            width: 9px;
-            margin-left: 5px;
-        }
+        .logos {
+            @include font-size($xl-font);
 
-        .enbd {
-            max-width: 175px;
-            margin-top: 30px;
-        }
-    }
-
-    .footer-items {
-        margin: auto 60px;
-        @include font-size($xs-font);
-        dl {
-            dt {
+            a {
                 font-weight: 600;
-                text-transform: uppercase;
             }
 
-            dd {
-                font-weight: 300;
-                line-height: 2;
+            .main {
+                width: 15px;
+                margin-left: 5px;
 
-                ul {
-                    padding: 0;
-                    margin-left: 0;
-                    margin-top: 10px;
-                    list-style: none;
+                @media (min-width: map-get($breakpoints, md)) {
+                    width: 9px;
                 }
             }
+
+            .enbd {
+                margin-top: 30px;
+                margin-bottom: 20px;
+
+                @media (min-width: map-get($breakpoints, md)) {
+                    max-width: 175px;
+                }
+            }
+
+            @media (min-width: map-get($breakpoints, md)) {
+                @include font-size($md-font);
+            }
         }
 
-        .social-links {
-            padding: 0;
-            margin-left: 0;
-            text-align: left;
-            list-style: none;
-            word-spacing: 10px;
+        .footer-items {
+            @include font-size($lg-font);
 
-            li {
-                display: inline-block;
+            @media (min-width: map-get($breakpoints, md)) {
+                margin-right: 60px;
+
+                @include font-size($xs-font);
+            }
+
+            dl {
+                dt {
+                    font-weight: 600;
+                    text-transform: uppercase;
+
+                    @media (max-width: map-get($breakpoints, md)) {
+                        margin-top: 20px;
+                    }
+
+                    hr {
+                        margin: auto 50px;
+                        border-top: 1px solid $white;
+
+                        @media (min-width: map-get($breakpoints, md)) {
+                            display: none;
+                        }
+                    }
+                }
+
+                dd {
+                    font-weight: 300;
+                    line-height: 2;
+
+                    ul {
+                        padding: 0;
+                        margin-left: 0;
+                        margin-top: 10px;
+                        list-style: none;
+                    }
+                }
+            }
+
+            .social-links {
+                padding: 0;
+                list-style: none;
+                margin-top: 20px;
+                text-align: left;
+                text-align: center;
+                word-spacing: 50px;
+
+                @media (min-width: map-get($breakpoints, md)) {
+                    word-spacing: 20px;
+                    margin-top: 0;
+                }
+
+                li {
+                    display: inline-block;
+
+                    @include font-size($xxl-font);
+
+                    @media (min-width: map-get($breakpoints, md)) {
+                        @include font-size($md-font);
+                    }
+                }
             }
         }
     }

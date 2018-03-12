@@ -23239,7 +23239,7 @@ requireSCSS.keys().forEach(requireSCSS);
 // require('expose-loader?app!./widgets/calendar/calendar');
 // require('expose-loader?app!./widgets/treetable/treetable');
 // require('expose-loader?app!./widgets/treetable/sortable');
-__webpack_require__(97);
+__webpack_require__(32);
 
 //require('./js/forms');
 
@@ -37579,13 +37579,13 @@ webpackContext.id = 21;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./cover/cover.scss": 82,
-	"./fixed-title/fixed-title.scss": 86,
-	"./footer/footer.scss": 25,
-	"./main/main.scss": 26,
-	"./nav/nav.scss": 27,
-	"./slider/slider.scss": 29,
-	"./swiper/swiper.scss": 95
+	"./cover/cover.scss": 25,
+	"./fixed-title/fixed-title.scss": 26,
+	"./footer/footer.scss": 27,
+	"./main/main.scss": 28,
+	"./nav/nav.scss": 29,
+	"./slider/slider.scss": 30,
+	"./swiper/swiper.scss": 31
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -37622,103 +37622,38 @@ webpackContext.id = 24;
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 28 */,
+/* 28 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 29 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */
+/* 30 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */
+/* 31 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */,
-/* 95 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 96 */,
-/* 97 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["app"] = __webpack_require__(98);
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["app"] = __webpack_require__(33);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 98 */
+/* 33 */
 /***/ (function(module, exports) {
 
 ////
