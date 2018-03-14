@@ -1,8 +1,6 @@
 @import "../../base/index";
 
 .pg-footer {
-    background-repeat: no-repeat;
-    background-position: center right;
     padding: 150px 0;
 
     @media (max-width: map-get($breakpoints, md)) {
