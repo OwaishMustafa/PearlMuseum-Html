@@ -64,7 +64,9 @@
                 position: absolute;
                 display: inline-block;
                 border: 2px solid #eee;
-           
+                @media (max-width: map-get($breakpoints, sm)) {
+                    top: 500px;
+                }
             }
         }
     }

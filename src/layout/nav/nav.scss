@@ -2,83 +2,91 @@
 
 .navbar {
     padding: 20px;
-
     @media (min-width: map-get($breakpoints, lg)) {
         padding: 0;
     }
 
-    button {
-        top: -6px;
-        right: 5rem;
-    }
-
-    .navbar-toggler-icon {
-        color: $white;
-    }
-
-    .navbar-brand {
-        color: $peach;
-        font-weight: 600;
-
-        @include font-size($md-font);
-
-        img {
-            width: 9px;
-            margin-left: 5px;
-        }
-    }
-
-    .navbar-nav {
-        width: 620px;
-
-        @media (min-width: map-get($breakpoints, lg)) {
-            margin-left: 70px;
+    .container {
+        width: 100%;
+        button {
+            top: -6px;
+            right: 5rem;
         }
 
-        @media (min-width: map-get($breakpoints, xl)) {
-            width: 780px;
+        .navbar-toggler-icon {
+            color: $white;
         }
 
-        .nav-item {
-            flex: 1;
+        .navbar-brand {
+            color: $peach;
             font-weight: 600;
-            text-transform: uppercase;
 
-            @include font-size($xs-font);
+            @include font-size($md-font);
 
-            a {
-                color: $white;
+            img {
+                width: 9px;
+                margin-left: 5px;
+            }
+        }
+
+        .navbar-nav {
+            width: 620px;
+
+            @media (min-width: map-get($breakpoints, lg)) {
+                margin-left: 70px;
             }
 
-            .dropdown-menu {
-                border: none;
-                border-radius: 0;
+            @media (min-width: map-get($breakpoints, xl)) {
+                width: 780px;
+            }
+
+            .nav-item {
+                flex: 1;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                @include font-size($xs-font);
 
                 @media (max-width: map-get($breakpoints, lg)) {
-                    display: none;
+                    font-weight: 900;
+                    padding: 15px 30px 15px 0px;
+                    @include font-size($sm-font);
                 }
 
                 a {
-                    color: $primary;
-                    font-weight: bold;
-                    text-transform: none;
-                    padding: 3px 40px 3px 15px;
+                    color: $white;
+                }
 
-                    @include font-size($xxs-font);
+                .dropdown-menu {
+                    border: none;
+                    border-radius: 0;
+
+                    // @media (max-width: map-get($breakpoints, lg)) {
+                    //     display: none;
+                    // }
+
+                    a {
+                        color: $primary;
+                        font-weight: bold;
+                        text-transform: none;
+                        padding: 3px 40px 3px 15px;
+
+                        @include font-size($xxs-font);
+                    }
                 }
             }
         }
-    }
 
-    .language {
-        padding: 20px;
-        text-align: center;
+        .language {
+            padding: 20px;
+            text-align: center;
 
-        @include font-size($md-font);
+            @include font-size($md-font);
 
-        @media (max-width: map-get($breakpoints, lg)) {
-            display: none;
-            margin-right: 10px;
+            @media (max-width: map-get($breakpoints, lg)) {
+                display: none;
+                margin-right: 10px;
+            }
         }
     }
 }

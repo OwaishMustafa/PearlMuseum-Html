@@ -10296,6 +10296,9 @@ button.swiper-pagination-bullet {
         position: absolute;
         display: inline-block;
         border: 2px solid #eee; }
+        @media (max-width: 576px) {
+          .pg-cover .pg-cover-bg .cover-content .mouse-wrap {
+            top: 500px; } }
   .pg-cover.sand {
     height: 1450px; }
     .pg-cover.sand .pg-cover-bg {
@@ -10564,89 +10567,102 @@ a {
   @media (min-width: 992px) {
     .navbar {
       padding: 0; } }
-  .navbar button {
-    top: -6px;
-    left: 5rem; }
-  .navbar .navbar-toggler-icon {
-    color: #ffffff; }
-  .navbar .navbar-brand {
-    color: #f9dabe;
-    font-weight: 600;
-    font-size: 14px; }
-    @media screen and (min-width: 0) {
-      .navbar .navbar-brand {
-        font-size: 14px; } }
-    @media screen and (min-width: 768px) {
-      .navbar .navbar-brand {
-        font-size: 16px; } }
-    @media screen and (min-width: 992px) {
-      .navbar .navbar-brand {
-        font-size: 18px; } }
-    .navbar .navbar-brand img {
-      width: 9px;
-      margin-right: 5px; }
-  .navbar .navbar-nav {
-    width: 620px; }
-    @media (min-width: 992px) {
-      .navbar .navbar-nav {
-        margin-right: 70px; } }
-    @media (min-width: 1200px) {
-      .navbar .navbar-nav {
-        width: 780px; } }
-    .navbar .navbar-nav .nav-item {
-      flex: 1;
+  .navbar .container {
+    width: 100%; }
+    .navbar .container button {
+      top: -6px;
+      left: 5rem; }
+    .navbar .container .navbar-toggler-icon {
+      color: #ffffff; }
+    .navbar .container .navbar-brand {
+      color: #f9dabe;
       font-weight: 600;
-      text-transform: uppercase;
-      font-size: 12px; }
+      font-size: 14px; }
       @media screen and (min-width: 0) {
-        .navbar .navbar-nav .nav-item {
-          font-size: 12px; } }
-      @media screen and (min-width: 768px) {
-        .navbar .navbar-nav .nav-item {
-          font-size: 13px; } }
-      @media screen and (min-width: 992px) {
-        .navbar .navbar-nav .nav-item {
+        .navbar .container .navbar-brand {
           font-size: 14px; } }
-      .navbar .navbar-nav .nav-item a {
-        color: #ffffff; }
-      .navbar .navbar-nav .nav-item .dropdown-menu {
-        border: none;
-        border-radius: 0; }
+      @media screen and (min-width: 768px) {
+        .navbar .container .navbar-brand {
+          font-size: 16px; } }
+      @media screen and (min-width: 992px) {
+        .navbar .container .navbar-brand {
+          font-size: 18px; } }
+      .navbar .container .navbar-brand img {
+        width: 9px;
+        margin-right: 5px; }
+    .navbar .container .navbar-nav {
+      width: 620px; }
+      @media (min-width: 992px) {
+        .navbar .container .navbar-nav {
+          margin-right: 70px; } }
+      @media (min-width: 1200px) {
+        .navbar .container .navbar-nav {
+          width: 780px; } }
+      .navbar .container .navbar-nav .nav-item {
+        flex: 1;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px; }
+        @media screen and (min-width: 0) {
+          .navbar .container .navbar-nav .nav-item {
+            font-size: 12px; } }
+        @media screen and (min-width: 768px) {
+          .navbar .container .navbar-nav .nav-item {
+            font-size: 13px; } }
+        @media screen and (min-width: 992px) {
+          .navbar .container .navbar-nav .nav-item {
+            font-size: 14px; } }
         @media (max-width: 992px) {
-          .navbar .navbar-nav .nav-item .dropdown-menu {
-            display: none; } }
-        .navbar .navbar-nav .nav-item .dropdown-menu a {
-          color: #4c8598;
-          font-weight: bold;
-          text-transform: none;
-          padding: 3px 15px 3px 40px;
-          font-size: 10px; }
-          @media screen and (min-width: 0) {
-            .navbar .navbar-nav .nav-item .dropdown-menu a {
-              font-size: 10px; } }
-          @media screen and (min-width: 768px) {
-            .navbar .navbar-nav .nav-item .dropdown-menu a {
-              font-size: 11px; } }
-          @media screen and (min-width: 992px) {
-            .navbar .navbar-nav .nav-item .dropdown-menu a {
-              font-size: 12px; } }
-  .navbar .language {
-    padding: 20px;
-    text-align: center;
-    font-size: 14px; }
-    @media screen and (min-width: 0) {
-      .navbar .language {
-        font-size: 14px; } }
-    @media screen and (min-width: 768px) {
-      .navbar .language {
-        font-size: 16px; } }
-    @media screen and (min-width: 992px) {
-      .navbar .language {
-        font-size: 18px; } }
-    @media (max-width: 992px) {
-      .navbar .language {
-        display: none;
-        margin-left: 10px; } }
+          .navbar .container .navbar-nav .nav-item {
+            font-weight: 900;
+            padding: 15px 0px 15px 30px;
+            font-size: 12px; } }
+  @media screen and (max-width: 992px) and (min-width: 0) {
+    .navbar .container .navbar-nav .nav-item {
+      font-size: 12px; } }
+  @media screen and (max-width: 992px) and (min-width: 768px) {
+    .navbar .container .navbar-nav .nav-item {
+      font-size: 14px; } }
+  @media screen and (max-width: 992px) and (min-width: 992px) {
+    .navbar .container .navbar-nav .nav-item {
+      font-size: 16px; } }
+        .navbar .container .navbar-nav .nav-item a {
+          color: #ffffff; }
+        .navbar .container .navbar-nav .nav-item .dropdown-menu {
+          border: none;
+          border-radius: 0; }
+          .navbar .container .navbar-nav .nav-item .dropdown-menu a {
+            color: #4c8598;
+            font-weight: bold;
+            text-transform: none;
+            padding: 3px 15px 3px 40px;
+            font-size: 10px; }
+            @media screen and (min-width: 0) {
+              .navbar .container .navbar-nav .nav-item .dropdown-menu a {
+                font-size: 10px; } }
+            @media screen and (min-width: 768px) {
+              .navbar .container .navbar-nav .nav-item .dropdown-menu a {
+                font-size: 11px; } }
+            @media screen and (min-width: 992px) {
+              .navbar .container .navbar-nav .nav-item .dropdown-menu a {
+                font-size: 12px; } }
+    .navbar .container .language {
+      padding: 20px;
+      text-align: center;
+      font-size: 14px; }
+      @media screen and (min-width: 0) {
+        .navbar .container .language {
+          font-size: 14px; } }
+      @media screen and (min-width: 768px) {
+        .navbar .container .language {
+          font-size: 16px; } }
+      @media screen and (min-width: 992px) {
+        .navbar .container .language {
+          font-size: 18px; } }
+      @media (max-width: 992px) {
+        .navbar .container .language {
+          display: none;
+          margin-left: 10px; } }
 .image-slider {
   position: relative; }
   .image-slider .carousel-indicators {
